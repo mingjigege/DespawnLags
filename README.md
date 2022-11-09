@@ -8,4 +8,5 @@
 可使用命令/despawntime <tick: int>修改掉落物存在时长。
 
 
-
+## License
+General Public License v3.0
