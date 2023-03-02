@@ -41,16 +41,13 @@ jobs:
     - name: MkDirs
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        mkdir D:/out/sdk
-        mkdir D:/out/sdk/Lib
-        mkdir D:/out/sdk/Header
         mkdir D:/out/plugins
     
     - name: Copy Out Files
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        cp x64/Release/*.dll D:/out/plugins
-        cp x64/Release/*.pdb D:/out/plugins
+        cp bulid/Release/*.dll D:/out/plugins
+        cp build/Release/*.pdb D:/out/plugins
       shell: bash
 
     - name: Upload plugins
@@ -71,4 +68,6 @@ jobs:
       with:
         body_path: ${{ github.workspace }}\CHANGELOG.md
         files: |
+          D:/out/DespawnLags.dll
+          D:/out/DespawnLags.pdb
           D:/out/DespawnLags.zip
