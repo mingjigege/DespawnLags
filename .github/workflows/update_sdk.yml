@@ -1,8 +1,6 @@
 name: Update SDK
 
 on:
-  schedule:
-    - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
