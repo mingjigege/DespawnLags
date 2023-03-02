@@ -21,7 +21,7 @@ void CheckProtocolVersion()
     auto current_protocol = ll::getServerProtocolVersion();
     if (TARGET_BDS_PROTOCOL_VERSION != current_protocol)
     {
-        logger.error("不兼容的BDS版本！本插件兼容 BDS-1.19.40 , 版本协议 {}",TARGET_BDS_PROTOCOL_VERSION);
+        logger.error("不兼容的BDS版本！本插件兼容 BDS-1.19.63 , 版本协议 {}",TARGET_BDS_PROTOCOL_VERSION);
         logger.error("这可能导致未知错误或引起服务端崩溃，请更换适配的插件版本。");
         MessageBox(NULL,TEXT("不兼容的BDS版本！\n\n请更换适配的插件版本或使用适配的BDS版本。"),TEXT("DespawnLags"),MB_ICONERROR | MB_OK);
     }
