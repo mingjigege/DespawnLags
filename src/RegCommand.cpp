@@ -14,21 +14,21 @@ void RegCommand(){
     command->addOverload({"DespawnTicks"});
     command->addOverload({"Reload"});
     command->setCallback([](DynamicCommand const& command, CommandOrigin const& origin, CommandOutput& output, std::unordered_map<std::string, DynamicCommand::Result>& results) {
-        if(results["DespawnTicks"].isSet){
+        if (results["DespawnTicks"].isSet) {
             int sec = results["DespawnTicks"].get<int>();
-            if(sec < 20){
+            if (sec < 20) {
                 return output.error("掉落物存在时间不能少于20刻!");
             }
-            else if(sec > 2147483647){
+            else if (sec > 2147483647) {
                 return output.error("掉落物存在时间不能大于2147483647刻!");
             }
-            else{
+            else {
                 Settings::DespawnSeconds = sec;
                 Settings::reloadJson("plugins/DespawnLags/config.json");
                 return output.success("设置成功");
             };
         }
-        if(results["Reload"].isSet){
+        if (results["Reload"].isSet) {
             Settings::LoadConfigFromJson("plugins/DespawnLags/config.json");
             return output.success("已重载插件DespawnLags");
         }
