@@ -68,6 +68,6 @@ jobs:
       with:
         body_path: ${{ github.workspace }}\CHANGELOG.md
         files: |
-          D:/out/DespawnLags.dll
-          D:/out/DespawnLags.pdb
+          D:/a/DespawnLags/DespawnLags/build/Release/DespawnLags.dll
+          D:/a/DespawnLags/DespawnLags/build/Release/DespawnLags.pdb
           D:/out/DespawnLags.zip
