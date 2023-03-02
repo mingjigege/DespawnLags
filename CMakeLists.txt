@@ -13,6 +13,7 @@ file(GLOB_RECURSE SRC_FILES_DIR
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/SDK/include
+    ${CMAKE_SOURCE_DIR}/SDK/include/llapi
 )
 
 link_directories(
