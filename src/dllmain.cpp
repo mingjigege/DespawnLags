@@ -1,12 +1,9 @@
-#include <llapi/LoggerAPI.h>
-#include <llapi/ServerAPI.h>
-
+#include <LoggerAPI.h>
+#include <ServerAPI.h>
 #include <stdio.h>
 #include <WinNls.h>
-
 #include <windows.h>
 #include <cstdio> 
-
 #include "version.h"
 
 void PluginInit();
