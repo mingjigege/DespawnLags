@@ -11,5 +11,3 @@ TClasslessInstanceHook(ItemActor*, "?spawnItem@Spawner@@QEAAPEAVItemActor@@AEAVB
     }
     return it;
 }
-
-//dAccess<int, 1316>(it) = Settings::DespawnSeconds;
