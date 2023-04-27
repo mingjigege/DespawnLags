@@ -9,7 +9,7 @@ TClasslessInstanceHook(ItemActor *, "?spawnItem@Spawner@@QEAAPEAVItemActor@@AEAV
     auto itemtype = it->getItemStack()->getTypeName();
     if (itemtype == "下界岩")
     {
-        it->setDespawnTime(10);
+        it->setDespawnTime(200);
         return it;
     }
     if (!Settings::ItemList.count(itemtype))
