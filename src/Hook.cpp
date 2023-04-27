@@ -7,7 +7,8 @@ TClasslessInstanceHook(ItemActor *, "?spawnItem@Spawner@@QEAAPEAVItemActor@@AEAV
 {
     auto it = original(this, a1, a2, a3, a4, a5);
     auto itemtype = it->getItemStack()->getTypeName();
-    if (itemtype == "下界岩")
+    logger.info(itemtype);
+    if (itemtype == "minecraft:netherrack")
     {
         it->setDespawnTime(200);
         return it;
